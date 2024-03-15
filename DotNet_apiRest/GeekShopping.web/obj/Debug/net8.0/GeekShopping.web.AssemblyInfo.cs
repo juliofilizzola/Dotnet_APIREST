@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeekShopping.web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7db9e78681de72de82dce7fdacf07b1fc8b393a0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7bc091079218aa7b14bb15c8b83fac0eeca117b")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeekShopping.web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeekShopping.web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

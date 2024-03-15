@@ -1,0 +1,14 @@
+﻿services:
+  geekshopping.api:
+    image: mysql:latest
+    restart: always
+    tty: true
+    environment:
+      MYSQL_PASSWORD: senha_mysql
+      MYSQL_ROOT_PASSWORD: senha_mysql
+      MYSQL_DATABASE: GeekShopping
+      MYSQL_USER: user_mysql
+    ports:
+      - "3316:3306"
+    volumes:
+      - ./database/mysql:/var/lib/mysql
