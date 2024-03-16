@@ -1,4 +1,8 @@
+using AutoMapper;
+using GeekShopping.API.Config;
+using GeekShopping.API.Model.Context;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,13 +10,28 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-builder.Services.AddDbContext<DbContext>(opt => {
-    var configDBParams = builder.Configuration.GetConnectionString("MyContextDB");
+var configDBParams = builder.Configuration.GetConnectionString("MyContextDB");
+builder.Services.AddDbContext<MySqlContext>(opt => {
     opt.UseMySql(configDBParams, ServerVersion.AutoDetect(configDBParams));
 });
 
-var app = builder.Build();
+IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+builder.Services.AddSingleton(mapper);
+builder.Services.AddAutoMapper(typeof(MappingConfig));
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "GeekShopping.ProductAPI", Version = "v1" });
+});
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "GeekShopping.ProductAPI", Version = "v1" });
+});
+
+var     app    = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment()) {

@@ -31,3 +31,4 @@ C:\Users\Julio\Documents\dev\Dotnet_APIREST\DotNet_apiRest\GeekShopping.API\obj\
 C:\Users\Julio\Documents\dev\Dotnet_APIREST\DotNet_apiRest\GeekShopping.API\obj\Debug\net8.0\GeekShopping.API.pdb
 C:\Users\Julio\Documents\dev\Dotnet_APIREST\DotNet_apiRest\GeekShopping.API\obj\Debug\net8.0\GeekShopping.API.genruntimeconfig.cache
 C:\Users\Julio\Documents\dev\Dotnet_APIREST\DotNet_apiRest\GeekShopping.API\obj\Debug\net8.0\ref\GeekShopping.API.dll
+C:\Users\Julio\Documents\dev\Dotnet_APIREST\DotNet_apiRest\GeekShopping.API\obj\Debug\net8.0\GeekShopping.API.sourcelink.json

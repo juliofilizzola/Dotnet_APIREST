@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "w6VkPbo579cytOZGTUimQ3lifEaYNMkjl5t5KNKhq0iUUfE+SiE3daDZ/L1J0Y6k21RUum7Ut1EE02UtfZmmBw==",
+  "dgSpecHash": "stOciQl/5xEdFfziDqG2EuGS1reQilYzMoqiAmu/SR/iXDMP1UjBBu/ftN+bPVkti1jGNc5DQ2X7OMF5N9F5og==",
   "success": true,
   "projectFilePath": "C:\\Users\\Julio\\Documents\\dev\\Dotnet_APIREST\\DotNet_apiRest\\GeekShopping.API\\GeekShopping.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Julio\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
-    "C:\\Users\\Julio\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Julio\\.nuget\\packages\\automapper.extensions.expressionmapping\\7.0.0\\automapper.extensions.expressionmapping.7.0.0.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0-preview.6.21355.2\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0-preview.6.21355.2.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.2\\microsoft.aspnetcore.openapi.8.0.2.nupkg.sha512",
@@ -64,16 +64,5 @@
     "C:\\Users\\Julio\\.nuget\\packages\\system.text.json\\9.0.0-preview.2.24128.5\\system.text.json.9.0.0-preview.2.24128.5.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requires AutoMapper (= 12.0.1) but version AutoMapper 13.0.1 was resolved.",
-      "libraryId": "AutoMapper",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

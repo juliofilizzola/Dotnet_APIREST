@@ -18,17 +18,20 @@
           }
         }
       },
-      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+      "AutoMapper.Extensions.ExpressionMapping/7.0.0": {
         "type": "package",
         "dependencies": {
-          "AutoMapper": "[12.0.1]",
-          "Microsoft.Extensions.Options": "6.0.0"
+          "AutoMapper": "[13.0.0, 14.0.0)"
         },
         "compile": {
-          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+          "lib/net6.0/AutoMapper.Extensions.ExpressionMapping.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+          "lib/net6.0/AutoMapper.Extensions.ExpressionMapping.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -1165,18 +1168,18 @@
         "lib/net6.0/AutoMapper.xml"
       ]
     },
-    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
-      "sha512": "+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
+    "AutoMapper.Extensions.ExpressionMapping/7.0.0": {
+      "sha512": "78Aq0Wh+34ET7qHAzwzQ72ECNeddvEVUpahAHYyMPuLy1j/TLXliVdjyy+ml2HPcleLnehSsddJCtUy8IB20NQ==",
       "type": "package",
-      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
+      "path": "automapper.extensions.expressionmapping/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
-        "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
-        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "automapper.extensions.expressionmapping.7.0.0.nupkg.sha512",
+        "automapper.extensions.expressionmapping.nuspec",
         "icon.png",
-        "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+        "lib/net6.0/AutoMapper.Extensions.ExpressionMapping.dll",
+        "lib/net6.0/AutoMapper.Extensions.ExpressionMapping.xml"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -3636,7 +3639,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper >= 13.0.1",
-      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "AutoMapper.Extensions.ExpressionMapping >= 7.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.0-preview.6.21355.2",
       "Microsoft.AspNetCore.OpenApi >= 8.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0-preview.2.24128.4",
@@ -3696,9 +3699,9 @@
             "target": "Package",
             "version": "[13.0.1, )"
           },
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+          "AutoMapper.Extensions.ExpressionMapping": {
             "target": "Package",
-            "version": "[12.0.1, )"
+            "version": "[7.0.0, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
@@ -3757,17 +3760,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requires AutoMapper (= 12.0.1) but version AutoMapper 13.0.1 was resolved.",
-      "libraryId": "AutoMapper",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }
