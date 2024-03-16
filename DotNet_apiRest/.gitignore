@@ -16,6 +16,7 @@ database
 
 # Generated files
 .idea/**/contentModel.xml
+obj
 
 # Sensitive or high-churn files
 .idea/**/dataSources/
