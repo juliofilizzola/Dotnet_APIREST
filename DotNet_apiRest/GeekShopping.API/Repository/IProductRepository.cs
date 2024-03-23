@@ -7,6 +7,6 @@ public interface IProductRepository {
     Task<IEnumerable<ProductDTO>> FindAll();
     Task<ProductDTO>              FindById(long    id);
     Task<ProductDTO>              Create(ProductDTO dto);
-    Task<ProductDTO>              Update(long      id, Partitioner<ProductDTO> vo);
+    Task<ProductDTO>              Update(long      id, ProductDTO dto);
     Task<bool>                 Delete(long      id);
 }
