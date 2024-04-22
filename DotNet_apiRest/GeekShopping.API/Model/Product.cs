@@ -28,4 +28,6 @@ public class Product: BaseEntity {
     [Column("image_url")]
     [StringLength(300)]
     public string ImageUrl { get; set; }
+
+    public virtual ICollection<ProductOnCategory> ProductCategories { get; set; }
 }
