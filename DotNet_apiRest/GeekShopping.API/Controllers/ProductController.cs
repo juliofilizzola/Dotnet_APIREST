@@ -23,7 +23,13 @@ namespace GeekShopping.API.Controllers
             return Ok(product);
         }
 
-        // [HttpPost]
-        // public async Task<>
+        [HttpPost]
+        public async Task<ActionResult<ProductDTO>> Create(ProductDTO dto) {
+            if (dto == null) return BadRequest();
+            var product = _productRepository.Create(dto);
+            return Ok(product);
+        }
+
+
     }
 }
