@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var configDBParams = builder.Configuration.GetConnectionString("MyContextDB");
-builder.Services.AddDbContext<MySqlContext>(opt => {
+builder.Services.AddDbContext<Context>(opt => {
     opt.UseMySql(configDBParams, ServerVersion.AutoDetect(configDBParams));
 });
 
