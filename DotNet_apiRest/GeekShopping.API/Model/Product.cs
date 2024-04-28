@@ -5,7 +5,7 @@ using GeekShopping.API.Model.Base;
 namespace GeekShopping.API.Model;
 
 [Table("product")]
-public class Product: BaseEntity {
+public class Product : BaseEntity {
     [Column("name")]
     [Required]
     [StringLength(100)]
@@ -28,6 +28,4 @@ public class Product: BaseEntity {
     [Column("image_url")]
     [StringLength(300)]
     public string ImageUrl { get; set; }
-
-    public virtual ICollection<ProductOnCategory> ProductCategories { get; set; }
 }
