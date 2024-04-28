@@ -15,6 +15,4 @@ public class Category : BaseEntity {
     [Required]
     [StringLength(100)]
     public string Code { get; set; }
-
-    public virtual ICollection<ProductOnCategory> ProductCategories { get; set; }
 }
