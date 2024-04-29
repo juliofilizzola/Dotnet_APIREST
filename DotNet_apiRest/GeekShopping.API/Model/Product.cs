@@ -5,7 +5,7 @@ using GeekShopping.API.Model.Base;
 namespace GeekShopping.API.Model;
 
 [Table("product")]
-public class Product: BaseEntity {
+public class Product : BaseEntity {
     [Column("name")]
     [Required]
     [StringLength(100)]

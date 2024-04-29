@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GeekShopping.API.Repository;
 
-public class ProductRepository(MySqlContext context, IMapper mapper) : IProductRepository {
-    private readonly MySqlContext _context = context;
-    private          IMapper      _mapper  = mapper;
+public class ProductRepository(Context context, IMapper mapper) : IProductRepository {
+    private readonly Context _context = context;
+    private    readonly      IMapper      _mapper  = mapper;
 
     public async Task<IEnumerable<ProductDTO>> FindAll() {
         List<Product> products = await _context.Products.ToListAsync();

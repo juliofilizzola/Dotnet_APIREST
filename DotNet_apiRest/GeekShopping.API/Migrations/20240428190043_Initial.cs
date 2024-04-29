@@ -7,12 +7,30 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace GeekShopping.API.Migrations
 {
     /// <inheritdoc />
-    public partial class addProductDataTableOnDB : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterDatabase()
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "category",
+                columns: table => new
+                {
+                    id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    name = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    code = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    created_at = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_category", x => x.id);
+                })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
@@ -37,11 +55,19 @@ namespace GeekShopping.API.Migrations
                     table.PrimaryKey("PK_product", x => x.id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.InsertData(
+                table: "category",
+                columns: new[] { "id", "code", "created_at", "name" },
+                values: new object[] { 1L, "XAS123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "TEC" });
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "category");
+
             migrationBuilder.DropTable(
                 name: "product");
         }
